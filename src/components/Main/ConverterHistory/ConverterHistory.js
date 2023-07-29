@@ -16,16 +16,29 @@ export function ConverterHistory({ savedResults, clearHistory }) {
           </button>
         </article>
         <article className={styles.history}>
-          {savedResults.map((result, index) => (
-            <HistoryItem
-              key={index}
-              date={result.date}
-              inputValue={result.input?.value}
-              inputCurrency={result.input?.currency}
-              outputValue={result.output?.value}
-              outputCurrency={result.output?.currency}
-            />
-          ))}
+          {savedResults.length < 8
+            ? savedResults.map((result, index) => (
+                <HistoryItem
+                  key={index}
+                  date={result.date}
+                  inputValue={result.input?.value}
+                  inputCurrency={result.input?.currency}
+                  outputValue={result.output?.value}
+                  outputCurrency={result.output?.currency}
+                />
+              ))
+            : savedResults
+                .slice(0, 8)
+                .map((result, index) => (
+                  <HistoryItem
+                    key={index}
+                    date={result.date}
+                    inputValue={result.input?.value}
+                    inputCurrency={result.input?.currency}
+                    outputValue={result.output?.value}
+                    outputCurrency={result.output?.currency}
+                  />
+                ))}
         </article>
       </article>
     </section>
