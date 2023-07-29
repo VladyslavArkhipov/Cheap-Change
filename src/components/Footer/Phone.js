@@ -3,7 +3,12 @@ export function Phone(props) {
   return (
     <div className={styles.phone}>
       <div className={styles.image}>
-        <img src={props.img} alt="phone"></img>
+        <img
+          width={props.width}
+          height={props.height}
+          src={props.img}
+          alt="phone"
+        ></img>
       </div>
       <div className={styles.text}>
         <h3>{props.number}</h3>

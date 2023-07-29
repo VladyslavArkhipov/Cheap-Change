@@ -1,0 +1,122 @@
+.section{
+    background-color: #F6F7FF;
+    padding: 80px 200px;
+}
+
+.wrapper{
+    background-color: #fff;
+    padding: 50px;
+}
+
+.header{
+    margin-bottom: 70px;
+    color: #1F1E25;
+font-family: 'Roboto';
+font-size: 40px;
+font-style: normal;
+font-weight: 700;
+line-height: 140%; /* 56px */
+}
+
+.converter{
+    display: flex;
+    justify-content: space-between;
+}
+
+.reverse{
+    padding-top: 75px;
+    
+}
+
+.inputs{
+    width: 355px;
+}
+
+
+.paragraph{
+    
+    margin-bottom: 30px;
+    color: #707C87;
+font-family: 'Roboto';
+font-size: 20px;
+font-style: normal;
+font-weight: 500;
+line-height: 140%; /* 28px */
+}
+
+.input_number{
+    margin-right: 15px;
+    margin-bottom: 25px;
+    padding: 15px 30px;
+    width: 220px;
+height: 60px;
+border-radius: 4px;
+border: 1px solid #C1C2CA;
+color: #707C87;
+text-align: center;
+font-family: 'Roboto';
+font-size: 20px;
+font-style: normal;
+font-weight: 600;
+line-height: 140%; /* 28px */
+}
+
+.select{
+    appearance: none; 
+  overflow: hidden;
+    background-repeat: no-repeat;
+    background-position: 85px 50%;
+    padding: 15px;
+    width: 120px;
+height: 60px;
+    border-radius: 4px;
+border: 1px solid #C1C2CA;
+color: #707C87;
+font-family: 'Roboto';
+font-size: 20px;
+font-style: normal;
+font-weight: 600;
+line-height: 140%; /* 28px */
+}
+
+input::-webkit-calendar-picker-indicator {
+    opacity: 0;
+}
+
+
+
+.input_date{
+    
+    background-repeat: no-repeat;
+    background-position: 170px 50%;
+    width: 220px;
+    padding: 15px 20px;
+height: 60px;
+border-radius: 4px;
+border: 1px solid #C1C2CA;
+color: #707C87;
+font-family: 'Roboto';
+font-size: 20px;
+font-style: normal;
+font-weight: 600;
+line-height: 140%; /* 28px */
+}
+
+.btn_wrapper{
+    text-align: end;
+}
+
+.button{
+    width: 220px;
+height: 60px;
+
+    border-radius: 4px;
+background: #2C36F2;
+color: #F6F7FF;
+text-align: center;
+font-family: 'Roboto';
+font-size: 18px;
+font-style: normal;
+font-weight: 500;
+line-height: 140%; /* 25.2px */
+}

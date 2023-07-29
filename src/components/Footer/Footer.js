@@ -12,8 +12,16 @@ export function Footer() {
     <div className={styles.footer}>
       <Info />
       <Nav footer={true} />
-      <Phone img={smartphone} number="3773" info="Цілодобова підтримка" />
       <Phone
+        width="10px"
+        height="16px"
+        img={smartphone}
+        number="3773"
+        info="Цілодобова підтримка"
+      />
+      <Phone
+        width="16px"
+        height="16px"
         img={bigPhone}
         number="8 800 111 22 33"
         info="Безкожтовно для дзвінків в межах України"

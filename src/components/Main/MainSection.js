@@ -1,4 +1,4 @@
-import { Converter } from "./Converter";
+import { ConverterInfo } from "./ConverterInfo";
 import { Image } from "./Image";
 import styles from "./Main.module.css";
 
@@ -6,7 +6,8 @@ export function MainSection(props) {
   return (
     <section style={{ backgroundImage: `url(${props.backgroundUrl})` }}>
       <div className={styles.wrapper}>
-        <Converter
+        <ConverterInfo
+          onVisibilityChange={props.onVisibilityChange}
           firstSection={props.firstSection}
           header={props.header}
           mainText={props.mainText}

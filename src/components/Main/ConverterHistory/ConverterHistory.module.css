@@ -1,0 +1,75 @@
+.converter_history{
+    background-color: #FFF;
+    padding: 80px 200px;
+}
+
+.wrapper{
+    padding: 40px 70px 60px 70px;
+    background-color: #F6F7FF;
+}
+
+.header_block{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.header{
+    color: #1F1E3F;
+font-family: 'Roboto';
+font-size: 28px;
+font-style: normal;
+font-weight: 500;
+line-height: 140%; /* 39.2px */
+}
+
+.button{
+    padding: 20px 30px;
+    border-radius: 4px;
+background: #2C36F2;
+color: #F6F7FF;
+text-align: center;
+font-family: 'Roboto';
+font-size: 16px;
+font-style: normal;
+font-weight: 500;
+line-height: normal;
+}
+
+.history{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.item{
+    width: 395px;
+    background-color: #FFF;
+    display: flex;
+    padding: 16px 30px;
+    justify-content: space-between;
+    margin-bottom: 15px;
+    
+}
+
+
+
+.date{
+    color: #C1C2CA;
+    font-family: 'Roboto';
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 130%; /* 23.4px */
+}
+
+.value{
+    color: #707C87;
+font-family: 'Roboto';
+font-size: 18px;
+font-style: normal;
+font-weight: 600;
+line-height: 130%; /* 23.4px */
+}
+
