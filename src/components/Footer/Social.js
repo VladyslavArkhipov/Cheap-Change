@@ -12,28 +12,28 @@ const socials = [
     src: facebook,
     width: "9px",
     height: "16px",
-    link: "https://www.facebook.com/", // Замените этот URL на соответствующую страницу Facebook
+    link: "https://www.facebook.com/",
   },
   {
     name: "Instagram",
     src: instagram,
     width: "16px",
     height: "16px",
-    link: "https://www.instagram.com/", // Замените этот URL на соответствующую страницу Instagram
+    link: "https://www.instagram.com/",
   },
   {
     name: "Twitter",
     src: twitter,
     width: "16px",
     height: "13px",
-    link: "https://twitter.com/", // Замените этот URL на соответствующую страницу Twitter
+    link: "https://twitter.com/",
   },
   {
     name: "YouTube",
     src: youtube,
     width: "16px",
     height: "13px",
-    link: "https://www.youtube.com/", // Замените этот URL на соответствующую страницу YouTube
+    link: "https://www.youtube.com/",
   },
 ];
 

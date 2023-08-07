@@ -1,8 +1,8 @@
 import styles from "./Converter.module.css";
 import { Select } from "./Select";
 import reverse from "../../../assets/images/reverse.svg";
-import calendar from "../../../assets/images/calendar.svg";
 import { useEffect, useState } from "react";
+import { SaveButton } from "./SaveButton";
 
 export function Converter({ savedResults, updateSavedResults }) {
   const [availableCurrency, setAvailableCurrency] = useState("EUR");
@@ -13,7 +13,7 @@ export function Converter({ savedResults, updateSavedResults }) {
 
   useEffect(() => {
     fetch(
-      "http://api.exchangeratesapi.io/v1/latest?access_key=4fec1933e831394ad490d14e66dbfbc3"
+      "http://api.exchangeratesapi.io/v1/latest?access_key=b82caa4b534ebc3b5dfddb60da0b1b18"
     )
       .then((response) => response.json())
       .then((json) => {
@@ -50,6 +50,26 @@ export function Converter({ savedResults, updateSavedResults }) {
     }
   }, [currency, desiredCurrency, availableCurrency, input]);
 
+  const getCurrentDate = () => {
+    const today = new Date();
+    const year = today.getFullYear();
+    const month = String(today.getMonth() + 1).padStart(2, "0");
+    const day = String(today.getDate()).padStart(2, "0");
+    return `${year}-${month}-${day}`;
+  };
+
+  const data = {
+    date: getCurrentDate(),
+    input: {
+      value: input,
+      currency: availableCurrency,
+    },
+    output: {
+      value: output,
+      currency: desiredCurrency,
+    },
+  };
+
   const changeHandlerOutput = (e) => {
     setDesiredCurrency(e.target.value);
   };
@@ -62,38 +82,13 @@ export function Converter({ savedResults, updateSavedResults }) {
     setInput(e.target.value);
   };
 
-  const getCurrentDate = () => {
-    const today = new Date();
-    const year = today.getFullYear();
-    const month = String(today.getMonth() + 1).padStart(2, "0");
-    const day = String(today.getDate()).padStart(2, "0");
-    return `${year}-${month}-${day}`;
-  };
-
-  const saveResultHandler = () => {
-    const newResult = {
-      date: getCurrentDate(),
-      input: {
-        value: input,
-        currency: availableCurrency,
-      },
-      output: {
-        value: output,
-        currency: desiredCurrency,
-      },
-    };
-    console.log(savedResults);
-
-    updateSavedResults(newResult);
-  };
-
   return (
     <section className={styles.section}>
       <article className={styles.wrapper}>
-        <h3 className={styles.header}>Конвертер валют</h3>
+        <h3 className={styles.header}>Currency converter</h3>
         <article className={styles.converter}>
           <article className={styles.inputs}>
-            <p className={styles.paragraph}>В мене є:</p>
+            <p className={styles.paragraph}>I have:</p>
             <input
               onChange={inputHandler}
               type="number"
@@ -103,7 +98,6 @@ export function Converter({ savedResults, updateSavedResults }) {
             <Select onChange={changeHandlerInput} value={availableCurrency} />
             <input
               type="date"
-              style={{ backgroundImage: `url(${calendar})` }}
               className={styles.input_date}
               defaultValue={getCurrentDate()}
             ></input>
@@ -112,18 +106,14 @@ export function Converter({ savedResults, updateSavedResults }) {
             <img src={reverse} alt="reverse"></img>
           </article>
           <article className={styles.inputs}>
-            <p className={styles.paragraph}>Хочу придбати:</p>
+            <p className={styles.paragraph}>I want to buy:</p>
             <input
               type="number"
               className={styles.input_number}
               defaultValue={output}
             ></input>
             <Select onChange={changeHandlerOutput} value={desiredCurrency} />
-            <article className={styles.btn_wrapper}>
-              <button onClick={saveResultHandler} className={styles.button}>
-                Зберегти результат
-              </button>
-            </article>
+            <SaveButton updateSavedResults={updateSavedResults} data={data} />
           </article>
         </article>
       </article>

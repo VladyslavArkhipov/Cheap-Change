@@ -17,14 +17,14 @@ export function Footer() {
         height="16px"
         img={smartphone}
         number="3773"
-        info="Цілодобова підтримка"
+        info="Round-the-clock support"
       />
       <Phone
         width="16px"
         height="16px"
         img={bigPhone}
         number="8 800 111 22 33"
-        info="Безкожтовно для дзвінків в межах України"
+        info="Free for calls within Ukraine"
       />
       <Social />
     </div>

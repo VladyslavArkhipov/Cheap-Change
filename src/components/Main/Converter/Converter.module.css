@@ -77,16 +77,30 @@ font-size: 20px;
 font-style: normal;
 font-weight: 600;
 line-height: 140%; /* 28px */
+background-color: #fff;
 }
 
 input::-webkit-calendar-picker-indicator {
     opacity: 0;
 }
 
+@supports not (-moz-appearance: none) {
+    .input_date {
+      background-image: url("../../../assets//images//calendar.svg");
+      
+    }
+  }
+  
+  
+  @-moz-document url-prefix() {
+    .input_date {
+      background-color: #fff; 
+    }
+  }
 
 
 .input_date{
-    
+    background-color: #fff;
     background-repeat: no-repeat;
     background-position: 170px 50%;
     width: 220px;
@@ -103,13 +117,17 @@ line-height: 140%; /* 28px */
 }
 
 .btn_wrapper{
-    text-align: end;
+    display: flex;
+    justify-content: flex-end;
 }
 
 .button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 220px;
 height: 60px;
-
+text-decoration: none;
     border-radius: 4px;
 background: #2C36F2;
 color: #F6F7FF;

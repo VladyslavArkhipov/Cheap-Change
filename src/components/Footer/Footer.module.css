@@ -25,6 +25,10 @@ line-height: 140%; /* 16.8px */
     display: flex;
 }
 
+.footer .phone .image{
+    padding-top: 3px;
+}
+
 .footer .phone .image img{
     
     margin-right: 20px;

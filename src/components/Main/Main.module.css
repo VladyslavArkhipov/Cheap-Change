@@ -37,6 +37,7 @@
 }
 
 .main .wrapper .converter .first_button{
+    text-decoration: none;
     width: 234px;
     padding: 20px 40px;
     border: none;
@@ -74,7 +75,7 @@
 }
 
 .main .wrapper .converter .second_button{
-    
+    text-decoration: none;
     width: 251px;
     padding: 25px 30px;
     border: none;

@@ -1,7 +1,7 @@
 import cabinetIcon from "../../assets/images/cabinet.svg";
 import styles from "./Header.module.css";
 export function Cabinet() {
-  const name = "Особистий кабінет";
+  const name = "Personal office";
   return (
     <div className={styles.cabinet}>
       <img src={cabinetIcon} alt="Cabinet icon" />
@@ -9,4 +9,3 @@ export function Cabinet() {
     </div>
   );
 }
-//Передалеть экспорты с дефолт на обычные

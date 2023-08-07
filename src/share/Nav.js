@@ -3,10 +3,10 @@ import styles from "./Share.module.css";
 
 export function Nav(props) {
   const menuItems = [
-    { label: "Послуги", path: "/services" },
-    { label: "Конвертер валют", path: "/currency-converter" },
-    { label: "Контакти", path: "/contacts" },
-    { label: "Задати питання", path: "/ask-question" },
+    { label: "Services", path: "/services" },
+    { label: "Currency converter", path: "/currency-converter" },
+    { label: "Contacts", path: "/contacts" },
+    { label: "Ask the question", path: "/ask-question" },
   ];
   const className = props.header ? styles.nav_header : styles.nav_footer;
 

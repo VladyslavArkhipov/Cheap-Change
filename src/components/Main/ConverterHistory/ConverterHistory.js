@@ -2,7 +2,8 @@ import styles from "./ConverterHistory.module.css";
 
 import { HistoryItem } from "./HistoryItem";
 export function ConverterHistory({ savedResults, clearHistory }) {
-  const handleClearHistory = () => {
+  const handleClearHistory = (e) => {
+    e.preventDefault();
     clearHistory();
   };
 
@@ -10,10 +11,10 @@ export function ConverterHistory({ savedResults, clearHistory }) {
     <section className={styles.converter_history}>
       <article className={styles.wrapper}>
         <article className={styles.header_block}>
-          <h4 className={styles.header}>Історія конвертації</h4>
-          <button onClick={handleClearHistory} className={styles.button}>
-            Очистити історію
-          </button>
+          <h4 className={styles.header}>Conversion history</h4>
+          <a href="/" onClick={handleClearHistory} className={styles.button}>
+            Clear history
+          </a>
         </article>
         <article className={styles.history}>
           {savedResults.length < 8

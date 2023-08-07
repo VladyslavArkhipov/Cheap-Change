@@ -25,6 +25,7 @@ line-height: 140%; /* 39.2px */
 }
 
 .button{
+    text-decoration: none;
     padding: 20px 30px;
     border-radius: 4px;
 background: #2C36F2;

@@ -10,6 +10,7 @@ import { ConverterHistory } from "./ConverterHistory/ConverterHistory";
 export function Main() {
   const [converterVisibility, setConverterVisibility] = useState(true);
   const [savedResults, setSavedResults] = useState([]);
+
   const handleConverterVisibility = (newValue) => {
     setConverterVisibility(newValue);
   };
@@ -28,9 +29,9 @@ export function Main() {
         onVisibilityChange={handleConverterVisibility}
         firstSection={true}
         backgroundUrl={backgroundUrl}
-        header="Чіп Чендж"
-        mainText="Обмінник валют - навчальний"
-        buttonText="Конвертер валют"
+        header="Cheap Change"
+        mainText="Currency exchanger - educational"
+        buttonText="Currency converter"
         image={card}
         width="341px"
         height="216px"
@@ -39,11 +40,11 @@ export function Main() {
         <MainSection
           onVisibilityChange={handleConverterVisibility}
           firstSection={false}
-          header="Конвертер валют"
+          header="Currency converter"
           mainText={
-            "Переважна діяльність банківської\nгрупи за останні чотири звітні квартали\nстановить 50 і більше відсотків."
+            "The predominant activity of the banking\ngroup for the last four reporting quarters\nis 50 percent or more."
           }
-          buttonText="Конвертувати валюту"
+          buttonText="Convert currency"
           image={cardInHand}
           width="436px"
           height="314px"

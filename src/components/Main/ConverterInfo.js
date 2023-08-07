@@ -9,16 +9,17 @@ export function ConverterInfo(props) {
   const buttonClassName = props.firstSection
     ? styles.first_button
     : styles.second_button;
-  const handleClick = () => {
+  const handleClick = (e) => {
+    e.preventDefault();
     props.onVisibilityChange(false);
   };
   return (
     <div className={styles.converter}>
       <h1 className={headerClassName}>{props.header}</h1>
       <p className={paragraphClassName}>{props.mainText}</p>
-      <button onClick={handleClick} className={buttonClassName}>
+      <a href="/" onClick={handleClick} className={buttonClassName}>
         {props.buttonText}
-      </button>
+      </a>
     </div>
   );
 }
